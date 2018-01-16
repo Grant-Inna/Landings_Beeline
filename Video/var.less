@@ -1,0 +1,170 @@
+
+@back-body: transparent;
+@back-size-body: cover;
+
+/* header */
+@back-header: transparent;
+@back-size-header: 100% 100%;
+@height-header: 45px;
+
+@back-header-logo: transparent;
+@back-header-elements: transparent;
+@width-header-elements: 50%;
+@width-header-logo: 100% - @width-header-elements - 10%;
+
+@back-header-extra: transparent;
+@height-header-extra: auto;
+
+/* main */
+@back-button-buy: transparent;
+@color-button-buy: transparent;
+@border-r-button-buy: transparent;
+
+@back-button-icon: transparent;
+
+@back-button-price: transparent;
+@color-button-price: transparent;
+@border-r-button-price: transparent;
+
+@back-button-cancel: transparent;
+@color-button-cancel: transparent;
+@border-r-button-cancel: transparent;
+
+/* footer */
+@back-footer: transparent;
+@color-footer: transparent;
+
+
+
+
+
+
+
+@break_lg: 800px;
+@break_md: 730px;
+@break_sm: 660px;
+@break_xsm: 560px;
+@break_xs: 410px;
+@break_xxs: 370px;
+@break_tiny: 310;
+
+@lg: 800px;
+@md: 730px;
+@sm: 660px;
+@xsm: 560px;
+@xs: 410px;
+@xxs: 370px;
+@tiny: 310;
+
+
+.lg-l(@min_height, @content){
+  @media screen and (min-width: @break_lg) and (min-height: @min_height) and ( orientation: landscape ){
+    @content();
+  }
+}
+.lg-p(@min_height, @content){
+  @media screen and (min-width: @break_lg) and (min-height: @min_height) and ( orientation: portrait ){
+    @content();
+  }
+}
+
+.md-l(@min_height, @content){
+  @media screen and (min-width: @break_md) and (min-height: @min_height) and ( orientation: landscape ){
+    @content();
+  }
+}
+.md-p(@min_height, @content){
+  @media screen and (min-width: @break_md) and (min-height: @min_height) and ( orientation: portrait ){
+    @content();
+  }
+}
+
+.sm-l(@min_height, @content){
+  @media screen and (min-width: @break_sm) and (min-height: @min_height) and ( orientation: landscape ){
+    @content();
+  }
+}
+.sm-p(@min_height, @content){
+  @media screen and (min-width: @break_sm) and (min-height: @min_height) and ( orientation: portrait ){
+    @content();
+  }
+}
+
+.xsm-l(@min_height, @content){
+  @media screen and (min-width: @break_xsm) and (min-height: @min_height) and ( orientation: landscape ){
+    @content();
+  }
+}
+.xsm-p(@min_height, @content){
+  @media screen and (min-width: @break_xsm) and (min-height: @min_height) and ( orientation: portrait ){
+    @content();
+  }
+}
+
+.xs-l(@min_height, @content){
+  @media screen and (min-width: @break_xs) and (min-height: @min_height) and ( orientation: landscape ){
+  @content();
+  }
+}
+.xs-p(@min_height, @content){
+  @media screen and (min-width: @break_xs) and (min-height: @min_height) and ( orientation: portrait ){
+    @content();
+  }
+}
+
+.xxs-l(@min_height, @content){
+  @media screen and (min-width: @break_xxs) and (min-height: @min_height) and ( orientation: landscape ){
+    @content();
+  }
+}
+.xxs-p(@min_height, @content){
+  @media screen and (min-width: @break_xxs) and (min-height: @min_height) and ( orientation: portrait ){
+    @content();
+  }
+}
+
+.tiny-l(@min_height, @content){
+  @media screen and (min-width: @break_tiny) and (min-height: @min_height) and ( orientation: landscape ){
+    @content();
+  }
+}
+.tiny-p(@min_height, @content){
+  @media screen and (min-width: @break_tiny) and (min-height: @min_height) and ( orientation: portrait ){
+    @content();
+  }
+}
+
+
+.from(@min_width, @content){
+  @media screen and (min-width: @min_width){
+    @content();
+  }
+}
+
+.to(@max_width, @content){
+  @media screen and (min-width: @max_width){
+    @content();
+  }
+}
+
+.from-to(@min_width, @max_width, @content){
+  @media screen and (min-width: @min_width) and (min-width: @max_width){
+    @content();
+  }
+}
+
+.flex { display: flex }
+.flex-center { display: flex; align-items: center; justify-content: center }
+.items-center { display: flex; align-items: center }
+.justify-center { display: flex; justify-content: center }
+.justify-around { display: flex; justify-content: space-around }
+.justify-between { display: flex; justify-content: space-between }
+.justify-evenly { display: flex; justify-content: space-evenly }
+.justify-start { display: flex; justify-content: flex-start }
+.justify-end { display: flex; justify-content: flex-end }
+.items-start { display: flex; align-items: flex-start }
+.column { display: flex; flex-direction: column }
+
+
+
+

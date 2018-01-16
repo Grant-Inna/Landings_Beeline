@@ -170,7 +170,7 @@ gulp.task( 'watch__common', function() {
 
 
 gulp.task( 'watch__all', function() {
-    gulp.watch([ 'media.less', 'media-xs-c-outside.less', allSRC ], all);
+    gulp.watch([ 'media.less', '_var.less', 'media-xs-c-outside.less', allSRC ], all);
 });
 
 var all = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'CSS7', 'CSS8', 'CSS9', 'CSS10' ];
