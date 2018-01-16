@@ -1,0 +1,35 @@
+@media screen and (min-width: 300px) and (max-height: 500px) and ( orientation: portrait ) {
+  .button__cancel {
+    width: 30%;
+    left: 35%;
+    margin-top: 0 !important;
+    position: absolute;
+    top: 200px; }
+  .main {
+    height: 100px !important;
+  }
+}
+@media screen and (min-height: 300px) and (max-width: 500px) and ( orientation: landscape ) {
+  .button__cancel {
+    width: 30%;
+    left: 35%;
+    margin-top: 0 !important;
+    position: absolute;
+    top: 220px; }
+}
+
+@media only screen and (min-width : 719px) and ( min-height : 599px ) and ( orientation: landscape ) {
+  .main {
+    justify-content: flex-end!important;}
+}
+@media only screen and (min-width : 719px) and ( min-height : 719px ) and ( orientation: portrait ) {
+  .main {
+    justify-content: flex-end !important;}
+}
+@media only screen and (min-width : 600px) and (min-height : 600px) {
+  .main {
+    background: url('back-main.png') bottom no-repeat !important;
+    background-size: 100% 100% !important;
+    width: 60% !important; height: 350px !important;
+    justify-content: flex-end !important;}
+}

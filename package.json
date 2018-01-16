@@ -1,0 +1,22 @@
+{
+  "name": "gulp_system_for_be_landings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.3.1",
+    "gulp-less": "*",
+    "gulp-group-css-media-queries": "1.2.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-base64-inline": "^1.0.3",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "browser-sync": "*",
+    "gulp-sourcemaps": "^2.6"
+  },
+  "author": "Inna Grant",
+  "license": "ISC"
+}
+
