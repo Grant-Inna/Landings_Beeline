@@ -1,4 +1,5 @@
 const gulp = require('gulp'),
+    smartGrid = require('smart-grid'),
     less = require('gulp-less'),
     base64 = require('gulp-base64-inline'),
     groupMedia = require('gulp-group-css-media-queries'),
@@ -163,6 +164,45 @@ gulp.task('CSS10', function() {
         .pipe(gulp.dest( '10/' ))
         .pipe(notify('CSS10 Success!'));
 });
+
+
+gulp.task('smartGrid', function() {
+    var options = {
+        offset: "0",
+        columns: "10",
+        mobileFirst: true,
+        container: {
+            maxWidth: "850px",
+            fields: "0"
+        },
+        breakPoints: {
+            lg: {
+                width: '800px'
+            },
+            md: {
+                width: '730px'
+            },
+            sm: {
+                width: '660px'
+            },
+            xsm: {
+                width: '560px'
+            },
+            xs: {
+                width: '410px'
+            },
+            xxs: {
+                width: '370px'
+            },
+            tiny: {
+                width: '310px'
+            }
+        }
+    };
+    smartGrid( './', options);
+});
+
+
 
 gulp.task( 'watch__common', function() {
     gulp.watch([ 'media.less', 'media-xs-c-outside.less' ], all);

@@ -1,0 +1,304 @@
+@columns: 10;
+@atom: (100% / @columns);
+
+
+@offset: 0;
+@offset_tiny: @offset;
+@offset_xxs: @offset;
+@offset_xs: @offset;
+@offset_xsm: @offset;
+@offset_sm: @offset;
+@offset_md: @offset;
+@offset_lg: @offset;
+
+@break_tiny: 310px;
+@break_xxs: 370px;
+@break_xs: 410px;
+@break_xsm: 560px;
+@break_sm: 660px;
+@break_md: 730px;
+@break_lg: 800px;
+
+@tiny: 310px;
+@xxs: 370px;
+@xs: 410px;
+@xsm: 560px;
+@sm: 660px;
+@md: 730px;
+@lg: 800px;
+
+
+@l: landscape;
+@p: portrait;
+
+
+
+.wrapper(){
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+
+.size(@n){
+    @val: 100% / @columns * @n;
+    width: ~"calc(@{val} - @{offset})";
+}
+
+.size-tiny(@n){
+    @val: 100% / @columns * @n;
+    .tiny(width, ~"calc(@{val} - @{offset_tiny})");
+}
+
+.size-xxs(@n){
+    @val: 100% / @columns * @n;
+    .xxs(width, ~"calc(@{val} - @{offset_xxs})");
+}
+
+.size-xs(@n){
+    @val: 100% / @columns * @n;
+    .xs(width, ~"calc(@{val} - @{offset_xs})");
+}
+
+.size-xsm(@n){
+    @val: 100% / @columns * @n;
+    .xsm(width, ~"calc(@{val} - @{offset_xsm})");
+}
+
+.size-sm(@n){
+    @val: 100% / @columns * @n;
+    .sm(width, ~"calc(@{val} - @{offset_sm})");
+}
+
+.size-md(@n){
+    @val: 100% / @columns * @n;
+    .md(width, ~"calc(@{val} - @{offset_md})");
+}
+
+.size-lg(@n){
+    @val: 100% / @columns * @n;
+    .lg(width, ~"calc(@{val} - @{offset_lg})");
+}
+
+
+
+.tiny(@orient, @name, @value){
+    @media screen and (min-width: @break_tiny) and (orientation: @orient){
+        @{name}: @value;
+    }
+}
+
+.tiny-block(@orient, @content){
+    @media screen and (min-width: @break_tiny) and (orientation: @orient){
+        @content();
+    }
+}
+
+.tiny-h(@height, @orient, @content){
+    @media screen and (min-width: @break_tiny) and (min-height: @height) and (orientation: @orient){
+        @content();
+    }
+}
+
+.xxs(@orient, @name, @value){
+    @media screen and (min-width: @break_xxs) and (orientation: @orient){
+        @{name}: @value;
+    }
+}
+
+.xxs-block(@orient, @content){
+    @media screen and (min-width: @break_xxs) and (orientation: @orient){
+        @content();
+    }
+}
+
+
+.xxs-h(@height, @orient, @content){
+    @media screen and (min-width: @break_xxs) and (min-height: @height) and (orientation: @orient){
+        @content();
+    }
+}
+
+.xs(@orient, @name, @value){
+    @media screen and (min-width: @break_xs) and (orientation: @orient){
+        @{name}: @value;
+    }
+}
+
+.xs-block(@orient, @content){
+    @media screen and (min-width: @break_xs) and (orientation: @orient){
+        @content();
+    }
+}
+
+.xs-h(@height, @orient, @content){
+    @media screen and (min-width: @break_xs) and (min-height: @height) and (orientation: @orient){
+        @content();
+    }
+}
+
+.xsm(@orient, @name, @value){
+    @media screen and (min-width: @break_xsm) and (orientation: @orient){
+        @{name}: @value;
+    }
+}
+
+.xsm-block(@orient, @content){
+    @media screen and (min-width: @break_xsm) and (orientation: @orient){
+        @content();
+    }
+}
+
+.xsm-h(@height, @orient, @content){
+    @media screen and (min-width: @break_xsm) and (min-height: @height) and (orientation: @orient){
+        @content();
+    }
+}
+
+.sm(@orient, @name, @value){
+    @media screen and (min-width: @break_sm) and (orientation: @orient){
+        @{name}: @value;
+    }
+}
+
+.sm-block(@orient, @content){
+    @media screen and (min-width: @break_sm) and (orientation: @orient){
+        @content();
+    }
+}
+
+.sm-h(@height, @orient, @content){
+    @media screen and (min-width: @break_sm) and (min-height: @height) and (orientation: @orient){
+        @content();
+    }
+}
+
+.md(@orient, @name, @value){
+    @media screen and (min-width: @break_md) and (orientation: @orient){
+        @{name}: @value;
+    }
+}
+
+.md-block(@orient, @content){
+    @media screen and (min-width: @break_md) and (orientation: @orient){
+        @content();
+    }
+}
+
+.md-h(@height, @orient, @content){
+    @media screen and (min-width: @break_md) and (min-height: @height) and (orientation: @orient){
+        @content();
+    }
+}
+
+.lg(@orient, @name, @value){
+    @media screen and (min-width: @break_lg)  and (orientation: @orient){
+        @{name}: @value;
+    }
+}
+
+.lg-block(@orient, @content){
+    @media screen and (min-width: @break_lg) and (orientation: @orient){
+        @content();
+    }
+}
+
+.lg-h(@height, @orient, @content){
+    @media screen and (min-width: @break_lg) and (min-height: @height) and (orientation: @orient){
+        @content();
+    }
+}
+
+
+.orient(@orient, @content){
+    @media screen and (orientation: @orient){
+        @content();
+    }
+}
+
+.from(@min_width, @content){
+    @media screen and (min-width: @min_width){
+        @content();
+    }
+}
+
+.from-h(@min_height, @content){
+    @media screen and (min-height: @min_height){
+        @content();
+    }
+}
+
+.to(@max_width, @content){
+    @media screen and (max-width: @max_width){
+        @content();
+    }
+}
+
+
+.to-h(@max_height, @content){
+    @media screen and (max-height: @max_height){
+        @content();
+    }
+}
+
+
+.from-to(@min_width, @max_width, @content){
+    @media screen and (min-width: @min_width) and (max-width: @max_width){
+        @content();
+    }
+}
+
+.from-to-h(@min_height, @max_height, @content){
+    @media screen and (min-height: @min_height) and (max-height: @max_height){
+        @content();
+    }
+}
+
+
+
+.from-o(@min_width, @orient, @content){
+    @media screen and (min-width: @min_width) and (orientation: @orient){
+        @content();
+    }
+}
+
+.from-h-o(@min_height, @orient, @content){
+    @media screen and (min-height: @min_height) and (orientation: @orient){
+        @content();
+    }
+}
+
+.to-o(@max_width, @orient, @content){
+    @media screen and (max-width: @max_width) and (orientation: @orient){
+        @content();
+    }
+}
+
+
+.to-h-o(@max_height, @orient, @content){
+    @media screen and (max-height: @max_height) and (orientation: @orient){
+        @content();
+    }
+}
+
+
+.from-to-o(@min_width, @max_width, @orient, @content){
+    @media screen and (min-width: @min_width) and (max-width: @max_width) and (orientation: @orient){
+        @content();
+    }
+}
+
+.from-to-h-o(@min_height, @max_height, @orient, @content){
+    @media screen and (min-height: @min_height) and (max-height: @max_height) and (orientation: @orient){
+        @content();
+    }
+}
+
+
+.clearfix(){
+    &::after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+}

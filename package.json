@@ -11,11 +11,15 @@
     "gulp-clean-css": "^3.3.1",
     "gulp-group-css-media-queries": "1.2.0",
     "gulp-imagemin": "^3.3.0",
+    "gulp-jade": "^1.1.0",
     "gulp-less": "*",
     "gulp-notify": "^3.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6"
   },
   "author": "Inna Grant",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "smart-grid": "^2.0.1"
+  }
 }
