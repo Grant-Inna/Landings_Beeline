@@ -534,7 +534,7 @@
 
 .landscape(@name, @value){
   @media screen and (orientation: landscape){
-    @name: @value;
+    @{name}: @value;
   }
 }
 .landscape-block(@content){
@@ -544,7 +544,7 @@
 }
 .portrait(@name, @value){
   @media screen and (orientation: portrait){
-    @name: @value;
+    @{name}: @value;
   }
 }
 .portrait-block(@content){
@@ -552,6 +552,8 @@
     @content();
   }
 }
+
+
 
 .from(@min_width, @content){
   @media screen and (min-width: @min_width){
