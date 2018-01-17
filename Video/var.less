@@ -542,6 +542,17 @@
     @content();
   }
 }
+.landscape-h( @height, @name, @value ) {
+  @media screen and (min-height: @height) and (orientation: landscape){
+    @{name}: @value;
+  }
+}
+.landscape-block-h( @height, @content ) {
+  @media screen and (min-height: @height) and (orientation: landscape){
+    @content();
+  }
+}
+
 .portrait(@name, @value){
   @media screen and (orientation: portrait){
     @{name}: @value;
