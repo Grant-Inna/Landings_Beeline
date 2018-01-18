@@ -63,7 +63,7 @@ gulp.task('images', ['imageMIN', 'watch_imageMIN']);
 gulp.task('jade', function() {
     return gulp.src( 'index.jade' )
         .pipe(jade())
-        .pipe(rename( 'order.html' ))
+        //.pipe(rename( 'order.html' ))
         .pipe(gulp.dest( '../' ));
 });
 
