@@ -4,7 +4,7 @@ Testing repo for plenty of landings
 
 [**Video**](https://grant-inna.github.io/Landings_Beeline/Video) *ready*
 
-[**Media-online**](https://grant-inna.github.io/Landings_Beeline/Media-online) *in process*
+[**Media-Online**](https://grant-inna.github.io/Landings_Beeline/Media-Online) *in process*
 
 [**Adult**](https://grant-inna.github.io/Landings_Beeline/Adult) *coming soon*
 
