@@ -192,7 +192,7 @@ gulp.task('smartGrid', function() {
                 width: '410px'
             },
             xxs: {
-                width: '370px'
+                width: '359px'
             },
             tiny: {
                 width: '310px'
@@ -205,18 +205,18 @@ gulp.task('smartGrid', function() {
 
 
 gulp.task( 'watch__common', function() {
-    gulp.watch([ 'media.less', 'media-xs-c-outside.less' ], all);
+    gulp.watch([ 'common.less' ], all); //'media.less', 'media-xs-c-outside.less'
 });
 
 
 gulp.task( 'watch__all', function() {
-    gulp.watch([ 'media.less', '_var.less', 'media-xs-c-outside.less', allSRC ], all);
+    gulp.watch([ 'common.less', 'media.less', 'var.less', 'media-xs-c-outside.less', allSRC ], all);
 });
 
 var all = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'CSS7', 'CSS8', 'CSS9', 'CSS10' ];
 var allSRC = './**/dev/style.less';
 var allW = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'CSS7', 'CSS8', 'CSS9', 'CSS10', 'watch__common' ];
-var allSrcTask = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'CSS7', 'CSS8', 'CSS9', 'CSS10', 'watch__common', 'watch__all' ];
+var allSrcTask = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'CSS7', 'CSS8', 'CSS9', 'CSS10', 'watch__all' ];
 
 gulp.task( 'default1', allW );
 gulp.task( 'default', allSrcTask );

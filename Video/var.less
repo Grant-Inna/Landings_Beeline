@@ -64,34 +64,44 @@
   margin-right: @margin-header-elements;
 }
 
-
-@back-header-extra-image: inline('images/back-header-extra.png');
+@back-header-extra-image: @back-header-image;
 @back-header-extra-position: center;
 @back-header-extra: @back-header-extra-image @back-header-extra-position no-repeat;
 @back-size-header-extra: contain;
 @height-header-extra: 50px;
 
 .header__extra {
-  position: relative;
+    position: relative;
+    display: none;
 
-  width: 100%;
-  min-height: @height-header-extra;
+    width: 100%;
+    min-height: @height-header-extra;
+
+    background: @back-header-extra;
+    background-size: @back-size-header-extra;
+
+    .xxs-h(@sm, @p, {
+        display: block;
+    })
 }
-
-@padding-relation: .ratio16x9;
 
 .relation {
-  height: 0;
-  .ratio-3x1
+    height: 0;
+    .ratio-3x1
 }
 
-.relation__content {
-  .full-size;
-  position: absolute;
-  top: 0; left: 0;
+@back-header-relation-image: inline('images/back-header-extra.png');
+@back-header-relation-position: center;
+@back-header-relation: @back-header-relation-image @back-header-relation-position no-repeat;
+@back-size-header-relation: contain;
 
-  background: @back-header-extra;
-  background-size: @back-size-header-extra;
+.relation__content {
+    .full-size;
+    position: absolute;
+    top: 0; left: 0;
+
+    background: @back-header-relation;
+    background-size: @back-size-header-relation;
 }
 
 /!* main *!/
@@ -181,6 +191,7 @@
 
 /* Разделить на первое, умножить на второе */
 /* Горизонт */
+.ratio-5x1 { padding-top: 20% }
 .ratio-4x1 { padding-top: 25% }
 .ratio-3x1 { padding-top: 33% }
 .ratio-2x1 { padding-top: 50% }
