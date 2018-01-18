@@ -816,7 +816,7 @@ a {
   .landscape-h(@xxs, height, 30px )
 }
 .button__cancel {
-  margin: 40px auto 0;
+  margin: 40px auto -50px;
   font-size: 2rem;
   font-variant: all-small-caps;
   .flex-center;
@@ -826,8 +826,8 @@ a {
   outline: none;
 
   .landscape-block({ margin-top: 8px; height: 20px });
-  .landscape-block-h(@xxs, { margin-top: 20px; height: 24px });
-  .landscape-block-h(@xs, { margin-top: 35px; height: 28px })
+  .landscape-block-h(@xxs, { margin: 20px auto 0; height: 24px });
+  .landscape-block-h(@xs, { margin: 35px auto 0; height: 28px })
 }
 
 .wrapper__form {
