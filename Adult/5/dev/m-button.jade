@@ -1,0 +1,13 @@
+mixin button( text, icon )
+    button#wapSubmitBtn.button__buy( type="submit", th:classappend="${!isWebRequest} ? 'wap'", th:if="${useSmsLink == null || useSmsLink == 'false'}" )
+        case icon
+            when '+'
+                span( th:switch="${evalRequestType}" )
+                    span( th:case="'subscription-request'" )
+                        span.button__text #{ text }
+                span.button__icon
+            default
+                span( th:switch="${evalRequestType}" )
+                    span( th:case="'subscription-request'" )
+                        span #{ text }
+
