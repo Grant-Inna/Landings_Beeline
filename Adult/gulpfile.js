@@ -165,6 +165,61 @@ gulp.task('CSS10', function() {
         .pipe(notify('CSS10 Success!'));
 });
 
+var HTMLdir = [ 'jade-order1', 'jade-order2', 'jade-order3', 'jade-order4', 'jade-order5', 'jade-order6', 'jade-order7', 'jade-order8', 'jade-order9' ];
+
+gulp.task( 'jade-order1', function() {
+    return gulp.src( '1/index.html' )
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( '1/' ));
+});
+
+gulp.task( 'jade-order2', function() {
+    return gulp.src( '2/index.html' )
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( '2/' ));
+});
+
+gulp.task( 'jade-order3', function() {
+    return gulp.src( '3/index.html' )
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( '3/' ));
+});
+
+gulp.task( 'jade-order4', function() {
+    return gulp.src( '4/index.html' )
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( '4/' ));
+});
+
+gulp.task( 'jade-order5', function() {
+    return gulp.src( '5/index.html' )
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( '5/' ));
+});
+
+gulp.task( 'jade-order6', function() {
+    return gulp.src( '6/index.html' )
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( '6/' ));
+});
+gulp.task( 'jade-order7', function() {
+    return gulp.src( '7/index.html' )
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( '7/' ));
+});
+gulp.task( 'jade-order8', function() {
+    return gulp.src( '8/index.html' )
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( '8/' ));
+});
+gulp.task( 'jade-order9', function() {
+    return gulp.src( '9/index.html' )
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( '9/' ));
+});
+
+
+
 
 gulp.task('smartGrid', function() {
     var options = {
@@ -220,7 +275,7 @@ var allSrcTask = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'CSS7', 'CSS8
 
 gulp.task( 'default1', allW );
 gulp.task( 'default', allSrcTask );
-
+gulp.task( 'to-order', HTMLdir );
 
 
 
