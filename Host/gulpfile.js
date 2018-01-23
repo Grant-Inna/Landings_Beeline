@@ -165,7 +165,7 @@ gulp.task('CSS10', function() {
         .pipe(notify('CSS10 Success!'));
 });
 
-var HTMLdir = [ 'jade-order1', 'jade-order2', 'jade-order3', 'jade-order4', 'jade-order5', 'jade-order6', 'jade-order7', 'jade-order8', 'jade-order9', 'jade-order10' ];
+var HTMLdir = [ 'jade-order1', 'jade-order2', 'jade-order3', 'jade-order4', 'jade-order5', 'jade-order6', 'jade-order7', 'jade-order8' ]; //, 'jade-order9', 'jade-order10'
 
 gulp.task( 'jade-order1', function() {
     return gulp.src( '1/index.html' )
@@ -212,7 +212,7 @@ gulp.task( 'jade-order8', function() {
         .pipe( rename( 'order.html' ))
         .pipe( gulp.dest( '8/' ));
 });
-gulp.task( 'jade-order9', function() {
+/*gulp.task( 'jade-order9', function() {
     return gulp.src( '9/index.html' )
         .pipe( rename( 'order.html' ))
         .pipe( gulp.dest( '9/' ));
@@ -221,7 +221,7 @@ gulp.task( 'jade-order10', function() {
     return gulp.src( '10/index.html' )
         .pipe( rename( 'order.html' ))
         .pipe( gulp.dest( '10/' ));
-});
+});*/
 
 
 
