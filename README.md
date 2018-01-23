@@ -10,9 +10,9 @@ Testing repo for plenty of landings
 
 [**News**](https://grant-inna.github.io/Landings_Beeline/News) *ready*
 
-[**Host**](https://grant-inna.github.io/Landings_Beeline/Host) *in process*
+[**Host**](https://grant-inna.github.io/Landings_Beeline/Host) *ready*
 
-[**Games**](https://grant-inna.github.io/Landings_Beeline/Games) *coming soon*
+[**Games**](https://grant-inna.github.io/Landings_Beeline/Games) *in process*
 
 [**Music**](https://grant-inna.github.io/Landings_Beeline/Music) *coming soon*
 
