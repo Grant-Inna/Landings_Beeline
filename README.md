@@ -6,11 +6,11 @@ Testing repo for plenty of landings
 
 [**Media-Online**](https://grant-inna.github.io/Landings_Beeline/Media-Online) *ready*
 
-[**Adult**](https://grant-inna.github.io/Landings_Beeline/Adult) *in process*
+[**Adult**](https://grant-inna.github.io/Landings_Beeline/Adult) *ready*
 
-[**News**](https://grant-inna.github.io/Landings_Beeline/News) *coming soon*
+[**News**](https://grant-inna.github.io/Landings_Beeline/News) *ready*
 
-[**Host**](https://grant-inna.github.io/Landings_Beeline/Host) *coming soon*
+[**Host**](https://grant-inna.github.io/Landings_Beeline/Host) *in process*
 
 [**Games**](https://grant-inna.github.io/Landings_Beeline/Games) *coming soon*
 
