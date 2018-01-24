@@ -19,3 +19,14 @@ Testing repo for plenty of landings
 [**Dating**](https://grant-inna.github.io/Landings_Beeline/Dating) *in process*
 
 
+
+### Technologies
+
+1. Jade
+2. Less
+3. Gulp
+4. Smart-grid
+5. A little bit of photoshop
+6. A little bit of brain
+
+
