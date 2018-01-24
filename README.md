@@ -12,8 +12,10 @@ Testing repo for plenty of landings
 
 [**Host**](https://grant-inna.github.io/Landings_Beeline/Host) *ready*
 
-[**Games**](https://grant-inna.github.io/Landings_Beeline/Games) *in process*
+[**Games**](https://grant-inna.github.io/Landings_Beeline/Games) *ready*
 
-[**Music**](https://grant-inna.github.io/Landings_Beeline/Music) *coming soon*
+[**Music**](https://grant-inna.github.io/Landings_Beeline/Music) *ready*
+
+[**Dating**](https://grant-inna.github.io/Landings_Beeline/Dating) *in process*
 
 
