@@ -1,0 +1,16 @@
+mixin header ( extra )
+    case extra
+        when '+'
+            .header__container
+                .header
+                    .header__logo
+                    .header__info Портал онлайн видео
+                    .header__elements
+                .header__extra
+                    .relation
+                    .relation__content
+        default
+            .header
+                .header__logo
+                .header__info Портал онлайн видео
+                .header__elements
