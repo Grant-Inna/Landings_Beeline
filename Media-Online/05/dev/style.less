@@ -32,7 +32,7 @@
 @back-size-header-logo: contain;
 
 @width-header-logo: 60%;
-@height-header-logo: 80%;
+@height-header-logo: 85% !important;
 
 @margin-header-logo: 4%;
 
@@ -52,7 +52,7 @@
 @back-size-header-element: contain;
 
 @width-header-elements: 80% - @width-header-logo;
-@height-header-elements: 60%;
+@height-header-elements: 45%;
 
 @margin-header-elements: 4%;
 
@@ -64,6 +64,10 @@
     height: @height-header-elements;
 
     margin-right: @margin-header-elements;
+}
+
+.header__info {
+    color: rgb(229, 41, 42);
 }
 
 
@@ -167,8 +171,8 @@
 }*/
 
 
-@back-button-price: rgb(13, 13, 23);
-@color-button-price: rgb(135, 135, 135);
+@back-button-price: #3e2525;
+@color-button-price: rgb(196, 196, 196);
 @border-r-button-price: 2px;
 
 .button__price {
@@ -177,7 +181,7 @@
 
     border-radius: @border-r-button-price;
 }
-
+/*
 @back-button-cancel: rgb(13, 13, 23);
 @color-button-cancel: rgb(255, 255, 255);
 @border-button-cancel: none;
@@ -189,7 +193,7 @@
 
     border: @border-button-cancel;
     border-radius: @border-r-button-price;
-}
+}*/
 
 /* footer */
 @back-footer: rgba(13, 13, 23, .9);
