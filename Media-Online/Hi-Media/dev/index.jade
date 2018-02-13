@@ -1,11 +1,11 @@
 html( xmlns="http://www.w3.org/1999/xhtml", xmlns:th="http://www.thymeleaf.org")
     head
-        include m-head
+        include ../../m-head
         +head( 'Hi-Media 18+' )
     body.lbody( th:if="${isWebRequest} == false" )
         .wrapper
-            include m-header
-            +header( '+' )
+            include ../../m-header
+            +header( 'Каталог всякой всячины', '+' )
             form.wrapper__form( method="POST", action="/landing", th:attr="action=@{order.html(sessionId=${session_id})}", name="mainFrm" )
                 input( type="hidden", name="requestId", th:value="${requestId}" )
                 input( type="hidden", name="msisdn", th:value="${msisdn}" )
@@ -14,6 +14,5 @@ html( xmlns="http://www.w3.org/1999/xhtml", xmlns:th="http://www.thymeleaf.org")
                 include m-button
                 +button( 'Продолжить просмотр', '-' )
                 span.button__price( th:if="${cpaSubscriptionChargePeriodPriceCodePrice > 0}", th:text="'Доступ: ' + ${cpaSubscriptionChargePeriodPriceCodePrice} + ' руб.' + ' за ' + ${cpaSubscriptionChargePeriodStr}" ) Доступ: 20 руб. за 1 день
-                button.button__cancel Отмена
             include footer
 
