@@ -2,21 +2,23 @@
 Testing repo for plenty of landings
 
 
-[**Video**](https://grant-inna.github.io/Landings_Beeline/Video) *ready*
+[**Video**](https://grant-inna.github.io/Landings_Beeline/Video)
 
-[**Media-Online**](https://grant-inna.github.io/Landings_Beeline/Media-Online) *ready*
+[**Media-Online**](https://grant-inna.github.io/Landings_Beeline/Media-Online)
 
-[**Adult**](https://grant-inna.github.io/Landings_Beeline/Adult) *ready*
+[**Adult**](https://grant-inna.github.io/Landings_Beeline/Adult)
 
-[**News**](https://grant-inna.github.io/Landings_Beeline/News) *ready*
+[**News**](https://grant-inna.github.io/Landings_Beeline/News)
 
-[**Host**](https://grant-inna.github.io/Landings_Beeline/Host) *ready*
+[**Host**](https://grant-inna.github.io/Landings_Beeline/Host)
 
-[**Games**](https://grant-inna.github.io/Landings_Beeline/Games) *ready*
+[**Games**](https://grant-inna.github.io/Landings_Beeline/Games) 
 
-[**Music**](https://grant-inna.github.io/Landings_Beeline/Music) *ready*
+[**Music**](https://grant-inna.github.io/Landings_Beeline/Music)
 
-[**Dating**](https://grant-inna.github.io/Landings_Beeline/Dating) *in process*
+[**Dating**](https://grant-inna.github.io/Landings_Beeline/Dating)
+
+[**Horoscope**](https://grant-inna.github.io/Landings_Beeline/Horoscope)
 
 
 ---
