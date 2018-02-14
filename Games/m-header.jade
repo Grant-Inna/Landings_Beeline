@@ -1,0 +1,16 @@
+mixin header ( text, extra )
+    case extra
+        when '+'
+            .header__container
+                .header
+                    .header__logo
+                    .header__info #{ text }
+                    .header__elements
+                .header__extra
+                    .relation
+                    .relation__content
+        default
+            .header
+                .header__logo
+                .header__info #{ text }
+                .header__elements
