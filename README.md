@@ -20,6 +20,8 @@ Testing repo for plenty of landings
 
 [**Horoscope**](https://grant-inna.github.io/Landings_Beeline/Horoscope)
 
+[**Weather**](https://grant-inna.github.io/Landings_Beeline/Weather)
+
 
 ---
 ### Technologies
