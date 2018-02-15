@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
     smartGrid = require('smart-grid'),
     less = require('gulp-less'),
+    jade = require('gulp-jade'),
     base64 = require('gulp-base64-inline'),
     groupMedia = require('gulp-group-css-media-queries'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -9,7 +10,6 @@ const gulp = require('gulp'),
     rename = require("gulp-rename"),
     inlinesource = require('gulp-inline-source'),
     browserSync = require("browser-sync").create(),
-    sourcemaps = require("gulp-sourcemaps"),
     notify = require("gulp-notify");
 
 
@@ -17,46 +17,40 @@ const gulp = require('gulp'),
 
 
 gulp.task('CSS1', function() {
-    return gulp.src( '01/dev/style.less' )
-        .pipe(sourcemaps.init())
+    return gulp.src( '1/dev/style.less' )
         .pipe(less())
         .pipe(base64())
         .pipe(groupMedia())
         .pipe(autoprefixer({ browsers: ['last 5 versions', '> 2%'] }))
         .pipe(cleanCSS())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(sourcemaps.write('dev/'))
-        .pipe(gulp.dest( '01/' ))
+        .pipe(gulp.dest( '1/' ))
         .pipe(notify('CSS1 Success!'));
 });
 
 
 gulp.task('CSS2', function() {
-    return gulp.src( '02/dev/style.less' )
-        .pipe(sourcemaps.init())
+    return gulp.src( '2/dev/style.less' )
         .pipe(less())
         .pipe(base64())
         .pipe(groupMedia())
         .pipe(autoprefixer({ browsers: ['last 5 versions', '> 2%'] }))
         .pipe(cleanCSS())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(sourcemaps.write('dev/'))
-        .pipe(gulp.dest( '02/' ))
+        .pipe(gulp.dest( '2/' ))
         .pipe(notify('CSS2 Success!'));
 });
 
 
 gulp.task('CSS3', function() {
-    return gulp.src( '03/dev/style.less' )
-        .pipe(sourcemaps.init())
+    return gulp.src( '3/dev/style.less' )
         .pipe(less())
         .pipe(base64())
         .pipe(groupMedia())
         .pipe(autoprefixer({ browsers: ['last 5 versions', '> 2%'] }))
         .pipe(cleanCSS())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(sourcemaps.write('dev/'))
-        .pipe(gulp.dest( '03/' ))
+        .pipe(gulp.dest( '3/' ))
         .pipe(notify('CSS3 Success!'));
 });
 
@@ -171,42 +165,34 @@ gulp.task('CSS10', function() {
 var HTMLdir = [ 'jade-order1', 'jade-order2', 'jade-order3' ]; //, 'jade-order4', 'jade-order5', 'jade-order6', 'jade-order7', 'jade-order8' 'jade-order9', 'jade-order10'
 
 
-gulp.task( 'jade-order1', function() {
-
-    var options = {
-        compress: false
-    };
-
-    return gulp.src( '1/index.html' )
+gulp.task('jade-order1', function() {
+    return gulp.src( '1/dev/index.jade' )
+        .pipe( jade())
         .pipe( rename( 'order.html' ))
-        .pipe(inlinesource(options))
+        .pipe( gulp.dest( '1/' ))
+        .pipe( inlinesource())
         .pipe( gulp.dest( '1/' ));
 });
 
-gulp.task('inlinesource', function () {
-
-    var options = {
-        compress: false
-    };
-
-    return gulp.src('1/order.html')
-        .pipe(inlinesource(options))
-        .pipe(gulp.dest('1/out/'));
-});
-
-gulp.task( 'jade-order2', function() {
-    return gulp.src( '2/index.html' )
+gulp.task('jade-order2', function() {
+    return gulp.src( '2/dev/index.jade' )
+        .pipe( jade())
         .pipe( rename( 'order.html' ))
-        .pipe(inlinesource())
+        .pipe( gulp.dest( '2/' ))
+        .pipe( inlinesource())
         .pipe( gulp.dest( '2/' ));
 });
 
-gulp.task( 'jade-order3', function() {
-    return gulp.src( '3/index.html' )
+gulp.task('jade-order3', function() {
+    return gulp.src( '3/dev/index.jade' )
+        .pipe( jade())
         .pipe( rename( 'order.html' ))
-        .pipe(inlinesource())
+        .pipe( gulp.dest( '3/' ))
+        .pipe( inlinesource())
         .pipe( gulp.dest( '3/' ));
 });
+
+
 /*
 gulp.task( 'jade-order4', function() {
     return gulp.src( '4/index.html' )
@@ -296,12 +282,12 @@ gulp.task( 'watch__all', function() {
     gulp.watch([ 'common.less', 'var.less', allSRC ], all);
 });
 
-var all = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'CSS7', 'CSS8', 'CSS9', 'CSS10' ];
+var all = [ 'CSS1', 'CSS2', 'CSS3'];
 var allSRC = './**/dev/style.less';
 var allW = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'CSS7', 'CSS8', 'CSS9', 'CSS10', 'watch__common' ];
 var allSrcTask = [ 'CSS1', 'CSS2', 'CSS3', 'CSS4', 'CSS5', 'CSS6', 'CSS7', 'CSS8', 'CSS9', 'CSS10', 'watch__all' ];
 
-gulp.task( 'default1', allW );
+gulp.task( 'default1', all );
 gulp.task( 'default2', allSrcTask );
 gulp.task( 'default', HTMLdir );
 
