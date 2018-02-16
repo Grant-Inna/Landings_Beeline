@@ -1,8 +1,8 @@
 @import '../../var';
 @import '../../common';
 
-@back-body-image: inline('images/bg.png');
-@back-body-position: center;
+@back-body-image: inline('images/bg.jpg');
+@back-body-position: top;
 @back-body: @back-body-image @back-body-position no-repeat;
 @back-size-body: cover;
 .wrapper {
@@ -84,66 +84,7 @@
     color: #b60b33;
 }
 
-@back-header-extra-image: transparent;
-@back-header-extra-position: center;
-@back-header-extra: @back-header-extra-image @back-header-extra-position no-repeat;
-@back-size-header-extra: contain;
-@height-header-extra: 50px;
-@margin-top-header-extra: 5px;
-@margin-bottom-header-extra: @margin-top-header-extra * -1;
 
-.header__extra {
-    position: relative;
-    display: none;
-    z-index: 1;
-
-    width: 100%;
-    min-height: @height-header-extra;
-
-    margin: @margin-top-header-extra auto @margin-bottom-header-extra * 16;
-
-    background: @back-header-extra;
-    background-size: @back-size-header-extra;
-
-    .xxs-h(@lg, @p, { // iPhone X
-        margin-top: 30px;
-        margin-bottom: -180px;
-    });
-    .sm-h(@lg, @l, { // На компьютере
-        display: block;
-        margin-bottom: -170px;
-    });
-
-    background: @back-header-extra;
-    background-size: @back-size-header-extra;
-
-    .tiny-h(@xs, @p, {
-        display: block;
-    })
-}
-
-.relation {
-    height: 0;
-    .ratio-2x1;
-
-}
-
-@back-header-relation-image: inline('images/header-extra.png');
-@back-header-relation-position: center;
-@back-header-relation: @back-header-relation-image @back-header-relation-position no-repeat;
-@back-size-header-relation: auto 95%;
-
-.relation__content {
-    .full-size;
-    position: absolute;
-    top: 0; left: 0;
-
-    background: @back-header-relation;
-    background-size: @back-size-header-relation;
-
-    .xsm( background-size, 75% auto )
-
-}
 
 /* button */
 @back-button-buy-image: inline('images/back-button.png');
