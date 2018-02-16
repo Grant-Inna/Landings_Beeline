@@ -17,14 +17,14 @@ const gulp = require('gulp'),
 
 
 gulp.task('CSS1', function() {
-    return gulp.src( '1/dev/style.less' )
+    return gulp.src( '01/dev/style.less' )
         .pipe(less())
         .pipe(base64())
         .pipe(groupMedia())
         .pipe(autoprefixer({ browsers: ['last 5 versions', '> 2%'] }))
         .pipe(cleanCSS())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest( '1/' ))
+        .pipe(gulp.dest( '01/' ))
         .pipe(notify('CSS1 Success!'));
 });
 
@@ -164,12 +164,12 @@ var HTMLdir = [ 'jade-order1', 'jade-order2', 'jade-order3' ]; //, 'jade-order4'
 
 
 gulp.task('jade-order1', function() {
-    return gulp.src( '1/dev/index.jade' )
+    return gulp.src( '01/dev/index.jade' )
         .pipe( jade())
         .pipe( rename( 'order.html' ))
-        .pipe( gulp.dest( '1/' ))
+        .pipe( gulp.dest( '01/' ))
         .pipe( inlinesource())
-        .pipe( gulp.dest( '1/' ));
+        .pipe( gulp.dest( '01/' ));
 });
 
 gulp.task('jade-order2', function() {
