@@ -70,12 +70,3 @@ gulp.task('jade', function() {
         .pipe( inlinesource())
         .pipe( gulp.dest( '../' ));
 });
-
-gulp.task('jade-order', function() {
-    return gulp.src( 'index.jade' )
-        .pipe( jade())
-        .pipe( rename( 'order.html' ))
-        .pipe( gulp.dest( '../' ))
-        .pipe( inlinesource())
-        .pipe( gulp.dest( '../' ));
-});
