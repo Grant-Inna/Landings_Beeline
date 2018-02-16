@@ -55,15 +55,18 @@ gulp.task('watch_imageMIN', function() {
     gulp.watch('images/*.{png,jpg,jpeg,svg}').on('change', browserSync.reload)
 });
 
-gulp.task('default', ['jade', 'CSS', 'watch_CSS', 'imageMIN']);
+gulp.task('default', ['jade', 'watch_JADE', 'CSS', 'watch_CSS', 'imageMIN']);
 gulp.task('images', ['imageMIN', 'watch_imageMIN']);
 
 
+gulp.task('watch_JADE', ['browser'], function() {
+    gulp.watch('index.jade', ['CSS']);
+    gulp.watch('index.jade').on('change', browserSync.reload)
+});
 
 gulp.task('jade', function() {
     return gulp.src( 'index.jade' )
         .pipe(jade())
-        //.pipe(rename( 'order.html' ))
         .pipe(gulp.dest( '../' ));
 });
 

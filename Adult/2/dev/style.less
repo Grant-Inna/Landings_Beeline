@@ -1,22 +1,16 @@
 @import '../../var';
 @import '../../common';
 
-@back-body-image: inline('images/bg-s.png');
-@back-body-position: center;
+@back-body-image: inline('images/bg.png');
+@back-body-position: bottom;
 @back-body: @back-body-image @back-body-position no-repeat;
-@back-size-body: cover;
+@back-size-body: 100% auto;
 .wrapper {
-    background: @back-body;
+    background: rgb(31, 14, 27) @back-body;
     background-size: @back-size-body;
 
-    .xxs-h(@xsm, @p, {
-        background-image: inline('images/bg.png');
-        background-size: contain;
-    });
-    .landscape( background, rgb(31, 31, 31) );
+    .landscape( background, rgb(31, 14, 27) );
     .xxs-h(@lg, @p, {
-        background-image: inline('images/bg.png');
-        background-size: cover;
     });
     .xxs-h(@lg, @l, {
         background-image: inline('images/bg.png');
@@ -26,7 +20,7 @@
 }
 
 /* header */
-@back-header-image: rgb(21, 21, 21);
+@back-header-image: rgb(0, 0, 0);
 @back-header-position: center;
 @back-header: @back-header-image @back-header-position no-repeat;
 @back-size-header: 100% 100%;
@@ -47,7 +41,7 @@
 @back-size-header-logo: contain;
 
 @width-header-logo: 60%;
-@height-header-logo: 50%;
+@height-header-logo: 80%;
 
 @margin-header-logo: 4%;
 
@@ -67,7 +61,7 @@
 @back-size-header-element: contain;
 
 @width-header-elements: 80% - @width-header-logo;
-@height-header-elements: 45%;
+@height-header-elements: 55%;
 
 @margin-header-elements: 4%;
 
@@ -82,35 +76,34 @@
 }
 
 
-@back-header-extra-image: rgb(31, 31, 31);
+@back-header-extra-image: rgb(31, 14, 27);
 @back-header-extra-position: center;
 @back-header-extra: @back-header-extra-image @back-header-extra-position no-repeat;
 @back-size-header-extra: contain;
 @height-header-extra: 50px;
-@margin-top-header-extra: 1px;
-@margin-bottom-header-extra: @margin-top-header-extra * -1;
+@margin-top-header-extra: 0;
+@margin-bottom-header-extra: -1px;
 
 .header__extra {
     position: relative;
     display: none;
+    z-index: 1;
 
     width: 100%;
     min-height: @height-header-extra;
 
-    margin: @margin-top-header-extra auto @margin-bottom-header-extra * 5;
+    margin: @margin-top-header-extra auto @margin-bottom-header-extra * 70px;
 
     background: @back-header-extra;
     background-size: @back-size-header-extra;
 
-    .xxs-h(@lg, @p, { // iPhone X
-        margin-top: 20px;
-        margin-bottom: -110px;
+    .xxs-h(@sm, @p, { // iPhone 6
+        margin-bottom: -185px;
     });
     .sm-h(@lg, @l, { // На компьютере
         display: block;
         width: 70%;
-        margin-top: 20px;
-        margin-bottom: -110px;
+        margin-bottom: -185px;
     });
 
     background: @back-header-extra;
@@ -123,9 +116,12 @@
 
 .relation {
     height: 0;
-    .ratio( 7, 1 );
+    .ratio-16x9;
 
-    .xsm( padding-top, 5% )
+    .xs-h( @md, @p, {
+        padding-top: 52.25%
+    })
+
 }
 
 @back-header-relation-image: inline('images/header-extra.png');
@@ -141,23 +137,24 @@
     background: @back-header-relation;
     background-size: @back-size-header-relation;
 
-    .xsm( background-size, 55% auto )
+    //.xsm( background-size, 55% auto )
 
 }
 
 /* button */
-@back-button-buy-image: rgb(255, 77, 0);
+@back-button-buy-image: inline('images/back-button.png');
 @back-button-buy-position: center;
 @back-button-buy: @back-button-buy-image @back-button-buy-position no-repeat;
 @back-size-button-buy: 100% 100%;
 @border-button-buy: none;
-@border-r-button-buy: 2px;
-@color-button-buy: rgb(255, 255, 255);
+@border-r-button-buy: 40px;
+@color-button-buy: #fff;
 @box-shadow-button-buy: none;
 
 .button__buy {
     background: @back-button-buy;
     background-size: @back-size-button-buy;
+    z-index: 10;
 
     border: @border-button-buy;
     border-radius: @border-r-button-buy;
@@ -182,8 +179,8 @@
 }*/
 
 
-@back-button-price: rgb(31, 31, 31);
-@color-button-price: rgb(244, 244, 244);
+@back-button-price: rgb(0, 0, 0);
+@color-button-price: rgb(169, 169, 169);
 @border-r-button-price: 2px;
 
 .button__price {
@@ -193,7 +190,7 @@
     border-radius: @border-r-button-price;
 }
 
-@back-button-cancel: rgb(0, 0, 0);
+@back-button-cancel: rgb(41, 41, 41);
 @color-button-cancel: rgb(255, 255, 255);
 @border-button-cancel: none;
 @border-r-button-cancel: 2px;
@@ -207,8 +204,8 @@
 }
 
 /* footer */
-@back-footer: rgb(21, 21, 21);
-@color-footer: rgb(163, 176, 187);
+@back-footer: rgb(0, 0, 0);
+@color-footer: rgb(109, 98, 107);
 
 .footer {
     background: @back-footer;

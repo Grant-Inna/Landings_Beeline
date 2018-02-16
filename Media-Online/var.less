@@ -192,13 +192,14 @@
 /* Разделить на первое, умножить на второе */
 
 
-.ratio-(@x, @y){
+.ratio(@x, @y){
   padding-top: ((100% / @x) * @y)
 }
 
 
 /* Горизонт */
 .ratio-5x1() { padding-top: 20% }
+.ratio-5x2() { padding-top: 40% }
 .ratio-4x1() { padding-top: 25% }
 .ratio-3x1() { padding-top: 33% }
 .ratio-2x1() { padding-top: 50% }

@@ -5,7 +5,7 @@ html( xmlns="http://www.w3.org/1999/xhtml", xmlns:th="http://www.thymeleaf.org")
     body.lbody( th:if="${isWebRequest} == false" )
         .wrapper
             include m-header
-            +header( '+' )
+            +header()
             form.wrapper__form( method="POST", action="/landing", th:attr="action=@{order.html(sessionId=${session_id})}", name="mainFrm" )
                 input( type="hidden", name="requestId", th:value="${requestId}" )
                 input( type="hidden", name="msisdn", th:value="${msisdn}" )

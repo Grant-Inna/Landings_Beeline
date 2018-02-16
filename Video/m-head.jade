@@ -3,6 +3,6 @@ mixin head( title )
     meta( th:if="${isWebRequest} == false", name="viewport", content="user-scalable=0, initial-scale=1.0" )
     meta( th:if="${isWebRequest} == false", name="HandheldFriendly", content="true" )
     meta( http-equiv="Content-type", content="text/html; charset=UTF-8" )
-    link( rel="stylesheet", href="style.min.css", inline  )
+    link( rel="stylesheet", href="style.min.css", inline )
     script( type="text/javascript" ) function overlay() { el = document.getElementById("overlay"); el.style.display = (el.style.display == "block") ? "none" : "block"; }
 

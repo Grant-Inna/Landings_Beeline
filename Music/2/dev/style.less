@@ -22,7 +22,7 @@
 }
 
 /* header */
-@back-header-image: rgb(15, 15, 15);
+@back-header-image: rgb(228, 231, 233);
 @back-header-position: center;
 @back-header: @back-header-image @back-header-position no-repeat;
 @back-size-header: 100% 100%;
@@ -78,12 +78,17 @@
 }
 
 
+.header__info {
+    color: #3b6492;
+}
+
+
 @back-header-extra-image: rgba(255, 255, 255, .8);
 @back-header-extra-position: center;
 @back-header-extra: @back-header-extra-image @back-header-extra-position no-repeat;
 @back-size-header-extra: contain;
 @height-header-extra: 50px;
-@margin-top-header-extra: 10px;
+@margin-top-header-extra: 50px;
 @margin-bottom-header-extra: @margin-top-header-extra * -1;
 
 .header__extra {
@@ -94,14 +99,14 @@
     width: 100%;
     min-height: @height-header-extra;
 
-    margin: @margin-top-header-extra auto @margin-bottom-header-extra * 5;
+    margin: @margin-top-header-extra auto @margin-bottom-header-extra * 1.6;
 
     background: @back-header-extra;
     background-size: @back-size-header-extra;
 
     .xxs-h(@lg, @p, { // iPhone X
         margin-top: 10px;
-        margin-bottom: -90px;
+        margin-bottom: -80px;
     });
     .sm-h(@lg, @l, { // На компьютере
         display: block;
@@ -118,14 +123,14 @@
 
 .relation {
     height: 0;
-    .ratio-4x1;
+    .ratio-3x1;
 
 }
 
 @back-header-relation-image: inline('images/header-extra.png');
 @back-header-relation-position: center;
 @back-header-relation: @back-header-relation-image @back-header-relation-position no-repeat;
-@back-size-header-relation: 90% 90%;
+@back-size-header-relation: 90% auto;
 
 .relation__content {
     .full-size;
@@ -135,18 +140,18 @@
     background: @back-header-relation;
     background-size: @back-size-header-relation;
 
-    //.xsm( background-size, 75% auto )
+    .xsm( background-size, 65% auto )
 
 }
 
 /* button */
-@back-button-buy-image: rgb(255, 216, 0);
+@back-button-buy-image:  linear-gradient(0deg, #39618e 0%, #5890ce 100%);
 @back-button-buy-position: center;
 @back-button-buy: @back-button-buy-image @back-button-buy-position no-repeat;
 @back-size-button-buy: 100% 100%;
 @border-button-buy: none;
-@border-r-button-buy: 1px;
-@color-button-buy: #000;
+@border-r-button-buy: 3px;
+@color-button-buy: #fff;
 @box-shadow-button-buy: none;
 
 .button__buy {
@@ -164,7 +169,7 @@
     .xs( font-size, 2.7rem )
 }
 
-@back-button-icon-image: inline('images/button-icon.svg');
+@back-button-icon-image: inline('images/button-icon.png');
 @back-button-icon: @back-button-icon-image center no-repeat;
 
 .button__icon {
@@ -176,8 +181,8 @@
     margin-left: 10px;
 }
 
-@back-button-price: rgb(255, 255, 255);
-@color-button-price: rgb(76, 76, 76);
+@back-button-price: #afbfca;
+@color-button-price: #131313;
 @border-r-button-price: 2px;
 
 .button__price {
@@ -186,8 +191,8 @@
 
     border-radius: @border-r-button-price;
 }
-
-@back-button-cancel: rgba(102, 99, 103, 0.9);
+/*
+@back-button-cancel: rgba(86, 103, 116, 0.9);
 @color-button-cancel: rgb(255, 255, 255);
 @border-button-cancel: none;
 @border-r-button-cancel: 2px;
@@ -198,11 +203,11 @@
 
     border: @border-button-cancel;
     border-radius: @border-r-button-price;
-}
+}*/
 
 /* footer */
-@back-footer: rgb(15, 15, 15);
-@color-footer: rgb(180, 188, 198);
+@back-footer: rgb(228, 231, 233);
+@color-footer: rgb(86, 86, 86);
 
 .footer {
     background: @back-footer;

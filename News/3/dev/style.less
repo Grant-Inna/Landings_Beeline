@@ -9,9 +9,11 @@
     background: rgb(255, 255, 255) @back-body;
     background-size: @back-size-body;
 
-    .landscape( background-size, cover );
+    .landscape-block({
+        //background-size: cover;
+        background-position: 10%;
+    });
     .xxs-h(@lg, @p, {
-        background-position: center 30%;
     });
     .xxs-h(@lg, @l, {
         background-size: cover;
@@ -20,7 +22,7 @@
 }
 
 /* header */
-@back-header-image: rgb(24, 32, 40);
+@back-header-image: rgb(19, 19, 19);
 @back-header-position: center;
 @back-header: @back-header-image @back-header-position no-repeat;
 @back-size-header: 100% 100%;
@@ -61,7 +63,7 @@
 @back-size-header-element: contain;
 
 @width-header-elements: 80% - @width-header-logo;
-@height-header-elements: 65%;
+@height-header-elements: 55%;
 
 @margin-header-elements: 4%;
 
@@ -75,13 +77,17 @@
     margin-right: @margin-header-elements;
 }
 
+.header__info {
+    color: rgb(228, 57, 0)
+}
 
-@back-header-extra-image: rgba(255, 255, 255, .7);
+
+@back-header-extra-image: rgba(255, 255, 255, .8);
 @back-header-extra-position: center;
 @back-header-extra: @back-header-extra-image @back-header-extra-position no-repeat;
 @back-size-header-extra: contain;
 @height-header-extra: 50px;
-@margin-top-header-extra: 15px;
+@margin-top-header-extra: 10px;
 @margin-bottom-header-extra: @margin-top-header-extra * -1;
 
 .header__extra {
@@ -92,18 +98,18 @@
     width: 100%;
     min-height: @height-header-extra;
 
-    margin: @margin-top-header-extra auto @margin-bottom-header-extra * 6;
+    margin: @margin-top-header-extra auto @margin-bottom-header-extra * 5;
 
     background: @back-header-extra;
     background-size: @back-size-header-extra;
 
     .xxs-h(@lg, @p, { // iPhone X
         margin-top: 10px;
-        margin-bottom: -110px;
+        margin-bottom: -140px;
     });
     .sm-h(@lg, @l, { // На компьютере
         display: block;
-        margin-bottom: -200px;
+        margin-bottom: -170px;
     });
 
     background: @back-header-extra;
@@ -116,15 +122,14 @@
 
 .relation {
     height: 0;
-//    .ratio-16x9;
-    padding-top: 45%;
+    .ratio-19x8;
 
 }
 
 @back-header-relation-image: inline('images/header-extra.png');
 @back-header-relation-position: center;
 @back-header-relation: @back-header-relation-image @back-header-relation-position no-repeat;
-@back-size-header-relation: 85%;
+@back-size-header-relation: auto 95%;
 
 .relation__content {
     .full-size;
@@ -134,18 +139,18 @@
     background: @back-header-relation;
     background-size: @back-size-header-relation;
 
-    .xsm( background-size, 75% auto )
+    //.xsm( background-size, 75% auto )
 
 }
 
 /* button */
-@back-button-buy-image: rgb(255, 216, 0);
+@back-button-buy-image: rgb(255, 64, 0);
 @back-button-buy-position: center;
 @back-button-buy: @back-button-buy-image @back-button-buy-position no-repeat;
 @back-size-button-buy: 100% 100%;
 @border-button-buy: none;
 @border-r-button-buy: 2px;
-@color-button-buy: #000;
+@color-button-buy: #fff;
 @box-shadow-button-buy: none;
 
 .button__buy {
@@ -159,7 +164,7 @@
 
     box-shadow: @box-shadow-button-buy;
 
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     .xs( font-size, 2.7rem )
 }
 
@@ -170,13 +175,13 @@
     background: @back-button-icon;
     background-size: contain;
 
-    width: 3rem;
+    width: 5rem;
     height: 3rem;
     margin-left: 10px;
 }
 
-@back-button-price: rgb(255, 255, 255);
-@color-button-price: rgb(79, 90, 105);
+@back-button-price: #8a7269;
+@color-button-price: rgb(255, 255, 255);
 @border-r-button-price: 2px;
 
 .button__price {
@@ -186,10 +191,10 @@
     border-radius: @border-r-button-price;
 }
 
-@back-button-cancel: rgb(61, 70, 83);
+@back-button-cancel: rgb(42, 42, 42);
 @color-button-cancel: rgb(255, 255, 255);
 @border-button-cancel: none;
-@border-r-button-cancel: 2px;
+@border-r-button-cancel: 0;
 
 .button__cancel {
     background: @back-button-cancel;
@@ -200,7 +205,7 @@
 }
 
 /* footer */
-@back-footer:rgb(61, 70, 83);
+@back-footer: rgb(19, 19, 19);
 @color-footer: rgb(180, 188, 198);
 
 .footer {
