@@ -1,23 +1,26 @@
 @import '../../var';
 @import '../../common';
 
-@back-body-image: inline('images/bg.png');
-@back-body-position: bottom;
+@back-body-image: inline('images/bg.jpg');
+@back-body-position: top;
 @back-body: @back-body-image @back-body-position no-repeat;
-@back-size-body: 100% auto;
+@back-size-body: cover;
 .wrapper {
-    background: rgb(255, 255, 255) @back-body;
+    background: @back-body;
     background-size: @back-size-body;
 
-    //.landscape( background, rgb(255, 255, 255) );
-    .landscape( background-size, cover );
-    .xxs-h(@lg, @p, {
-        background-position: center 30%;
+    .to-o( @xxs, @p, {
+        background-image: inline('images/bg.png');
+        background-position: top;
+        background-size: 96% auto;
     });
-    .xxs-h(@lg, @l, {
-        background-size: cover;
-    })
 
+    .from-h-o( @md, @p, {
+        background-image: inline('images/bg.png');
+        background-position: center;
+    });
+
+    .landscape( background-position, center )
 }
 
 /* header */
