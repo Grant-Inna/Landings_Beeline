@@ -11,9 +11,9 @@ html( xmlns="http://www.w3.org/1999/xhtml", xmlns:th="http://www.thymeleaf.org")
                 input( type="hidden", name="msisdn", th:value="${msisdn}" )
                 input( type="hidden", name="repeatCode", value="false" )
                 div( th:replace="fragment/errors" )
-                include m-button
+                include ../../m-button
                 +button( 'СМОТРЕТЬ' )
                 span.button__price( th:if="${cpaSubscriptionChargePeriodPriceCodePrice > 0}", th:text="'Доступ: ' + ${cpaSubscriptionChargePeriodPriceCodePrice} + ' руб.' + ' за ' + ${cpaSubscriptionChargePeriodStr}" ) Доступ: 20 руб. за 1 день
                 //button.button__cancel Отмена
-            include footer
+            include ../../footer
 
