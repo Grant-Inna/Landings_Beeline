@@ -1,24 +1,26 @@
 @import '../../var';
 @import '../../common';
 
-@back-body-image: inline('images/bg.png');
-@back-body-position: bottom;
+@back-body-image: inline('images/bg.jpg');
+@back-body-position: top;
 @back-body: @back-body-image @back-body-position no-repeat;
-@back-size-body: 100% auto;
+@back-size-body: contain;
 .wrapper {
-    background: rgb(255, 255, 255) @back-body;
+    background: @back-body;
     background-size: @back-size-body;
 
-    .landscape-block({
-        //background-size: cover;
-        background-position: 10%;
+    .to-o( @xxs, @p, {
+        background-image: inline('images/bg.png');
+        background-position: top;
+        background-size: 96% auto;
     });
-    .xxs-h(@lg, @p, {
-    });
-    .xxs-h(@lg, @l, {
-        background-size: cover;
-    })
 
+    .from-h-o( @md, @p, {
+        background-image: inline('images/bg.png');
+        background-position: center;
+    });
+
+    .landscape( background-position, center )
 }
 
 /* header */
@@ -83,7 +85,7 @@
 }
 
 
-@back-header-extra-image: rgba(255, 255, 255, .8);
+/*@back-header-extra-image: rgba(255, 255, 255, .8);
 @back-header-extra-position: center;
 @back-header-extra: @back-header-extra-image @back-header-extra-position no-repeat;
 @back-size-header-extra: contain;
@@ -142,7 +144,7 @@
 
     //.xsm( background-size, 75% auto )
 
-}
+}*/
 
 /* button */
 @back-button-buy-image: rgb(46, 155, 211);
