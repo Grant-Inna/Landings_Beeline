@@ -15,7 +15,7 @@ const gulp = require('gulp'),
 
 
 
-var all = [ 'CSS1', 'CSS2', 'CSS3'];
+var styles = [ 'CSS1', 'CSS2', 'CSS3'];
 
 gulp.task('CSS1', function() {
     return gulp.src( '1/dev/style.less' )
@@ -55,12 +55,24 @@ gulp.task('CSS3', function() {
         .pipe(notify('CSS3 Success!'));
 });
 
+gulp.task('CSSHi-Media', function() {
+    return gulp.src( 'Hi-Media/dev/style.less' )
+        .pipe(less())
+        .pipe(base64())
+        .pipe(groupMedia())
+        .pipe(autoprefixer({ browsers: ['last 5 versions', '> 2%'] }))
+        .pipe(cleanCSS())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest( 'Hi-Media/' ))
+        .pipe(notify('CSS3 Success!'));
+});
 
-var HTMLdir = [ 'jade-order1', 'jade-order2', 'jade-order3' ];
+var HTMLdir = [ 'jade-order1', 'jade-order2', 'jade-order3', 'jade-orderHi-Media' ];
 
 gulp.task('jade-order1', function() {
     return gulp.src( '1/dev/index.jade' )
         .pipe( jade())
+        .pipe( gulp.dest( '1/' ))
         .pipe( rename( 'order.html' ))
         .pipe( gulp.dest( '1/' ))
         .pipe( inlinesource())
@@ -70,6 +82,7 @@ gulp.task('jade-order1', function() {
 gulp.task('jade-order2', function() {
     return gulp.src( '2/dev/index.jade' )
         .pipe( jade())
+        .pipe( gulp.dest( '2/' ))
         .pipe( rename( 'order.html' ))
         .pipe( gulp.dest( '2/' ))
         .pipe( inlinesource())
@@ -79,16 +92,28 @@ gulp.task('jade-order2', function() {
 gulp.task('jade-order3', function() {
     return gulp.src( '3/dev/index.jade' )
         .pipe( jade())
+        .pipe( gulp.dest( '3/' ))
         .pipe( rename( 'order.html' ))
         .pipe( gulp.dest( '3/' ))
         .pipe( inlinesource())
         .pipe( gulp.dest( '3/' ));
 });
 
+gulp.task('jade-orderHi-Media', function() {
+    return gulp.src( 'Hi-Media/dev/index.jade' )
+        .pipe( jade())
+        .pipe( gulp.dest( 'Hi-Media/' ))
+        .pipe( rename( 'order.html' ))
+        .pipe( gulp.dest( 'Hi-Media/' ))
+        .pipe( inlinesource())
+        .pipe( gulp.dest( 'Hi-Media/' ));
+});
 
+var all = [ 'CSS1', 'CSS2', 'CSS3', 'CSSHi-Media', 'jade-order1', 'jade-order2', 'jade-order3', 'jade-orderHi-Media'];
 
-gulp.task( 'styles', all );
-gulp.task( 'default', HTMLdir );
+gulp.task( 'styles', styles );
+gulp.task( 'HTML', HTMLdir );
+gulp.task( 'default', all );
 
 
 
