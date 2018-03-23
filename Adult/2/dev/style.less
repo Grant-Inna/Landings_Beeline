@@ -10,8 +10,7 @@
     background-size: @back-size-body;
 
     .landscape( background, rgb(31, 14, 27) );
-    .xxs-h(@lg, @p, {
-    });
+    .xxs( background-image,inline('images/bg.jpg') );
     .xxs-h(@lg, @l, {
         background-image: inline('images/bg.png');
         background-size: cover;
@@ -55,13 +54,17 @@
     margin-left: @margin-header-logo;
 }
 
+.header__info {
+    color: #a51157;
+}
+
 @back-header-elements-image: inline('images/header-elems.png');
 @back-header-elements-position: right;
 @back-header-elements: @back-header-elements-image @back-header-elements-position no-repeat;
 @back-size-header-element: contain;
 
-@width-header-elements: 80% - @width-header-logo;
-@height-header-elements: 55%;
+@width-header-elements: 10%;
+@height-header-elements: 30%;
 
 @margin-header-elements: 4%;
 

@@ -61,6 +61,7 @@ var HTMLdir = [ 'jade-order1', 'jade-order2', 'jade-order3' ];
 gulp.task('jade-order1', function() {
     return gulp.src( '1/dev/index.jade' )
         .pipe( jade())
+        .pipe( gulp.dest( '1/' ))
         .pipe( rename( 'order.html' ))
         .pipe( gulp.dest( '1/' ))
         .pipe( inlinesource())
@@ -70,6 +71,7 @@ gulp.task('jade-order1', function() {
 gulp.task('jade-order2', function() {
     return gulp.src( '2/dev/index.jade' )
         .pipe( jade())
+        .pipe( gulp.dest( '2/' ))
         .pipe( rename( 'order.html' ))
         .pipe( gulp.dest( '2/' ))
         .pipe( inlinesource())
@@ -79,6 +81,7 @@ gulp.task('jade-order2', function() {
 gulp.task('jade-order3', function() {
     return gulp.src( '3/dev/index.jade' )
         .pipe( jade())
+        .pipe( gulp.dest( '3/' ))
         .pipe( rename( 'order.html' ))
         .pipe( gulp.dest( '3/' ))
         .pipe( inlinesource())
