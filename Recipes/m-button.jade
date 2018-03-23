@@ -4,10 +4,10 @@ mixin button( text, icon )
             when '+'
                 span( th:switch="${evalRequestType}" )
                     span( th:case="'subscription-request'" )
-                        span.button__text #{ text }
+                        div.button__text #{ text }
                 span.button__icon
             default
                 span( th:switch="${evalRequestType}" )
                     span( th:case="'subscription-request'" )
-                        span #{ text }
+                        div.button__text #{ text }
 
