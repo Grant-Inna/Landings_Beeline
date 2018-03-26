@@ -869,7 +869,11 @@ a {
   .justify-center;
 
   .landscape( margin-top, 3px );
-  .landscape-h(@xxs, margin-top, 0 )
+  .landscape-h(@xxs, margin-top, 0 );
+
+  .from-to-o( 550px, 620px, @l, {
+    flex-grow: 0;
+  });
 }
 
 .footer {
