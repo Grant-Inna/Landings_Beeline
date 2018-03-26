@@ -443,6 +443,11 @@
     @content();
   }
 }
+.landscape-w-h( @height, @width, @name, @value ) {
+  @media screen and (min-height: @height) and (max-width: @width) and (orientation: landscape){
+    @{name}: @value;
+  }
+}
 
 .portrait(@name, @value){
   @media screen and (orientation: portrait){
@@ -532,6 +537,11 @@
 
 .from-to-h-o(@min_height, @max_height, @orient, @content){
   @media screen and (min-height: @min_height) and (max-height: @max_height) and (orientation: @orient){
+    @content();
+  }
+}
+.from-to-w-h-o(@min_height, @max_height, @min_width, @orient, @content){
+  @media screen and (min-height: @min_height) and (max-height: @max_height) and (min-width: @min_width) and (orientation: @orient){
     @content();
   }
 }

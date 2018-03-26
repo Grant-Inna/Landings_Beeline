@@ -747,7 +747,7 @@ a {
   .justify-between;
 
 
-  .landscape( height, 227px );
+  .landscape-w-h( 10px, 550px, height, 227px );
   .landscape-h(@xxs, height, 100% );
 }
 
@@ -812,6 +812,9 @@ a {
   .from-to-h-o( 351px, 420px, @l, {
     margin-top: 30px;
   });
+  .from-to-w-h-o( 351px, 420px, 550px, @l, {
+    margin-top: 10px;
+  });
 
   font-size: 3.2rem !important;
   font-weight: 600;
@@ -821,7 +824,7 @@ a {
 
 }
 .button__text {
-  .landscape( margin, 0 auto );
+  margin: 0 auto;
   .flex-center;
   text-align: center;
   text-transform: uppercase;

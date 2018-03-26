@@ -294,6 +294,12 @@
     }
 }
 
+.from-to-w-h-o(@min_height, @max_height, @min_width, @orient, @content){
+    @media screen and (min-height: @min_height) and (max-height: @max_height) and (min-width: @min_width) and (orientation: @orient){
+        @content();
+    }
+}
+
 
 .clearfix(){
     &::after{
