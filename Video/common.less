@@ -291,6 +291,7 @@ sub {
 
 sup {
   top: -0.5em;
+
 }
 
 /* Embedded content
@@ -821,13 +822,15 @@ a {
 
 }
 .button__text {
-  .landscape( margin-left, auto );
+  margin: 0 auto;
   .flex-center;
   text-transform: uppercase;
   font-size: 3.2rem !important;
 }
 
-
+.button__icon {
+  .landscape( margin-right, auto )
+}
 .button__price {
   margin: 0 auto;
   font-size: 2.2rem;
