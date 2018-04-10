@@ -89,9 +89,11 @@ gulp.task('jade-order3', function() {
 });
 
 
+var allAll = [ 'jade-order1', 'jade-order2', 'jade-order3', 'CSS1', 'CSS2', 'CSS3' ];
 
 gulp.task( 'styles', all );
-gulp.task( 'default', HTMLdir );
+gulp.task( 'default1', HTMLdir );
+gulp.task( 'default', allAll );
 
 
 

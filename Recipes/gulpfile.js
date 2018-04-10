@@ -15,7 +15,7 @@ const gulp = require('gulp'),
 
 
 
-var styles = [ 'CSS1', 'CSS2', 'CSS3'];
+var all = [ 'CSS1', 'CSS2', 'CSS3'];
 
 gulp.task('CSS1', function() {
     return gulp.src( '1/dev/style.less' )
@@ -88,11 +88,12 @@ gulp.task('jade-order3', function() {
         .pipe( gulp.dest( '3/' ));
 });
 
-var all = [ 'CSS1', 'CSS2', 'CSS3', 'jade-order1', 'jade-order2', 'jade-order3'];
 
-gulp.task( 'styles', styles );
-gulp.task( 'HTML', HTMLdir );
-gulp.task( 'default', all );
+var allAll = [ 'jade-order1', 'jade-order2', 'jade-order3', 'CSS1', 'CSS2', 'CSS3' ];
+
+gulp.task( 'styles', all );
+gulp.task( 'default1', HTMLdir );
+gulp.task( 'default', allAll );
 
 
 
