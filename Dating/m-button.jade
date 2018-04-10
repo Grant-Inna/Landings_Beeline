@@ -2,12 +2,12 @@ mixin button( text, icon )
     button#wapSubmitBtn.button__buy( type="submit", th:classappend="${!isWebRequest} ? 'wap'", th:if="${useSmsLink == null || useSmsLink == 'false'}" )
         case icon
             when '+'
-                span( th:switch="${evalRequestType}" )
-                    span( th:case="'subscription-request'" )
+                div( th:switch="${evalRequestType}", style="width: 100%; display:flex; align-items:center; justify-content:center" )
+                    div( th:case="'subscription-request'", style="width: 100%; display:flex; align-items:center; justify-content:center" )
                         div.button__text #{ text }
                 span.button__icon
             default
-                span( th:switch="${evalRequestType}" )
-                    span( th:case="'subscription-request'" )
+                div( th:switch="${evalRequestType}", style="width: 100%; display:flex; align-items:center; justify-content:center" )
+                    div( th:case="'subscription-request'", style="width: 100%; display:flex; align-items:center; justify-content:center" )
                         div.button__text #{ text }
 
