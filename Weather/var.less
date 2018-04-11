@@ -716,3 +716,7 @@
 
 
 
+.landscape-w-h( @height, @width, @name, @value ) {
+  @media screen and (min-height: @height) and (max-width: @width) and (orientation: landscape) {
+    @{name}: @value;
+}}
