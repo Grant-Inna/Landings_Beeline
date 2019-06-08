@@ -1,6 +1,7 @@
 # Landings for Beeline
 Testing repo for plenty of landings
 
+For mobile devices only
 
 [**Video**](https://grant-inna.github.io/Landings_Beeline/Video)
 
